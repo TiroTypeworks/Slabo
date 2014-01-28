@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni0315.cap" format="1">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="-183" y="700" type="line"/>
+      <point x="-92" y="700" type="line"/>
+      <point x="-152" y="527" type="line"/>
+      <point x="-212" y="527" type="line"/>
+    </contour>
+  </outline>
+</glyph>

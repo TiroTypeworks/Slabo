@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni0303.cap" format="1">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="-330" y="660" type="line"/>
+      <point x="-302" y="697"/>
+      <point x="-260" y="697" type="qcurve"/>
+      <point x="-227" y="697"/>
+      <point x="-204" y="674" type="qcurve"/>
+      <point x="-179" y="650"/>
+      <point x="-158" y="650" type="qcurve"/>
+      <point x="-123" y="650"/>
+      <point x="-106" y="695" type="qcurve"/>
+      <point x="-91" y="695" type="line"/>
+      <point x="-91" y="637" type="line"/>
+      <point x="-119" y="600"/>
+      <point x="-161" y="600" type="qcurve"/>
+      <point x="-194" y="600"/>
+      <point x="-218" y="623" type="qcurve"/>
+      <point x="-242" y="647"/>
+      <point x="-263" y="647" type="qcurve"/>
+      <point x="-299" y="647"/>
+      <point x="-315" y="602" type="qcurve"/>
+      <point x="-330" y="602" type="line"/>
+    </contour>
+  </outline>
+</glyph>

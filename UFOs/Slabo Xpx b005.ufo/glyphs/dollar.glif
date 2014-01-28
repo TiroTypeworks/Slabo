@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dollar" format="1">
+  <advance width="536"/>
+  <unicode hex="0024"/>
+  <outline>
+    <contour>
+      <point x="237" y="-90" type="line"/>
+      <point x="237" y="-2" type="line"/>
+      <point x="143" y="-1"/>
+      <point x="58" y="33" type="qcurve"/>
+      <point x="58" y="185" type="line"/>
+      <point x="130" y="185" type="line"/>
+      <point x="130" y="87" type="line"/>
+      <point x="169" y="71"/>
+      <point x="236" y="69" type="qcurve"/>
+      <point x="237" y="69" type="line"/>
+      <point x="237" y="318" type="line"/>
+      <point x="135" y="360"/>
+      <point x="50" y="446"/>
+      <point x="50" y="514" type="qcurve"/>
+      <point x="50" y="590"/>
+      <point x="149" y="690"/>
+      <point x="237" y="700" type="qcurve"/>
+      <point x="237" y="790" type="line"/>
+      <point x="302" y="790" type="line"/>
+      <point x="302" y="701" type="line"/>
+      <point x="398" y="696"/>
+      <point x="464" y="663" type="qcurve"/>
+      <point x="464" y="521" type="line"/>
+      <point x="392" y="521" type="line"/>
+      <point x="392" y="613" type="line"/>
+      <point x="352" y="629"/>
+      <point x="302" y="631" type="qcurve"/>
+      <point x="302" y="387" type="line"/>
+      <point x="404" y="346"/>
+      <point x="490" y="255"/>
+      <point x="490" y="189" type="qcurve"/>
+      <point x="490" y="115"/>
+      <point x="396" y="12"/>
+      <point x="302" y="1" type="qcurve"/>
+      <point x="302" y="-90" type="line"/>
+    </contour>
+    <contour>
+      <point x="405" y="177" type="qcurve"/>
+      <point x="405" y="221"/>
+      <point x="350" y="274"/>
+      <point x="302" y="295" type="qcurve"/>
+      <point x="302" y="71" type="line"/>
+      <point x="356" y="80"/>
+      <point x="405" y="138"/>
+    </contour>
+    <contour>
+      <point x="135" y="526" type="qcurve"/>
+      <point x="135" y="482"/>
+      <point x="190" y="431"/>
+      <point x="237" y="411" type="qcurve"/>
+      <point x="237" y="630" type="line"/>
+      <point x="186" y="623"/>
+      <point x="135" y="565"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="k" format="1">
+  <advance width="390"/>
+  <unicode hex="006B"/>
+  <outline>
+    <contour>
+      <point x="30" y="50" type="line"/>
+      <point x="80" y="50" type="line"/>
+      <point x="80" y="550" type="line"/>
+      <point x="30" y="550" type="line"/>
+      <point x="30" y="600" type="line"/>
+      <point x="140" y="600" type="line"/>
+      <point x="140" y="50" type="line"/>
+      <point x="180" y="50" type="line"/>
+      <point x="180" y="0" type="line"/>
+      <point x="30" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="230" y="390" type="line"/>
+      <point x="380" y="390" type="line"/>
+      <point x="380" y="340" type="line"/>
+      <point x="327" y="340" type="line"/>
+      <point x="213" y="219" type="line"/>
+      <point x="344" y="50" type="line"/>
+      <point x="390" y="50" type="line"/>
+      <point x="390" y="0" type="line"/>
+      <point x="235" y="0" type="line"/>
+      <point x="235" y="50" type="line"/>
+      <point x="272" y="50" type="line"/>
+      <point x="273" y="52" type="line"/>
+      <point x="150" y="213" type="line"/>
+      <point x="267" y="340" type="line"/>
+      <point x="230" y="340" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="f_iogonek" format="1">
+  <advance width="420"/>
+  <outline>
+    <component base="f_i"/>
+    <component base="uni0328" xOffset="430"/>
+  </outline>
+</glyph>
