@@ -11,6 +11,10 @@ languagesystem latn TRK; # Turkish
 feature locl {
 
 script latn;
+	language NLD;
+		sub I J by IJ;
+		sub i j by ij;
+	
 	language MOL;
 		lookup LOCL_COMMAACCENT {
 			sub uni015E by uni0218;
@@ -18,9 +22,6 @@ script latn;
 			sub scedilla by scommaaccent;
 			sub tcedilla by tcommaaccent;
 		} LOCL_COMMAACCENT;
-	
-#	language NLD;
-#		lookup LOCL_COMMAACCENT;
 	
 	language ROM;
 		lookup LOCL_COMMAACCENT;
