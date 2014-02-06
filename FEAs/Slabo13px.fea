@@ -1,0 +1,459 @@
+
+languagesystem latn dflt;
+languagesystem latn CAT; # Catalan
+languagesystem latn MOL; # Moldavian
+languagesystem latn NLD; # Dutch
+languagesystem latn ROM; # Romanian
+languagesystem latn TRK; # Turkish
+
+
+#--------------------------------------
+feature locl {
+
+script latn;
+	language MOL;
+		lookup LOCL_COMMAACCENT {
+			sub uni015E by uni0218;
+			sub uni0162 by Tcommaaccent;
+			sub scedilla by scommaaccent;
+			sub tcedilla by tcommaaccent;
+		} LOCL_COMMAACCENT;
+	
+#	language NLD;
+#		lookup LOCL_COMMAACCENT;
+	
+	language ROM;
+		lookup LOCL_COMMAACCENT;
+
+	language TRK;
+		sub i by i.TRK;
+
+} locl;
+
+
+#--------------------------------------
+feature ccmp {
+
+script latn;
+	language CAT;
+		sub l periodcentered by ldot;
+
+	language NLD;
+		sub I uni0301 J uni0301 by uni01320301;
+		sub Iacute J uni0301 by uni01320301;
+		sub IJ uni0301 by uni01320301;
+		sub i uni0301 j uni0301 by uni01330300;
+		sub iacute j uni0301 by uni01330300;
+		sub ij uni0301 by uni01330300;
+
+} ccmp;
+
+
+#--------------------------------------
+feature liga {
+
+	sub f f b by f_f_b;
+	sub f f h by f_f_h;
+	sub f f i by f_f_i;
+	sub f f iogonek by f_f_iogonek;
+	sub f f ij by f_f_ij;
+	sub f f j by f_f_j;
+	sub f f k by f_f_k;
+	sub f f l by f_f_l;
+	sub f b by f_b;
+	sub f f by f_f;
+	sub f h by f_h;
+	sub f i by f_i;
+	sub f iogonek by f_iogonek;
+	sub f ij by f_ij;
+	sub f j by f_j;
+	sub f k by f_k;
+	sub f l by f_l;
+
+	lookupflag IgnoreMarks;
+	sub f' [ecaron gbreve hcircumflex hbar i.TRK igrave iacute icircumflex itilde idieresis imacron ibreve jcircumflex kcommaaccent lacute lcaron lcommaaccent lslash ldot rcaron germandbls zcaron thorn ij uni01330300 f_f_b f_f_h f_f_i f_f_iogonek f_f_ij f_f_j f_f_k f_f_l exclam question backslash parenright bracketright braceright quotesingle quotedbl asterisk quoteleft quoteright quotedblleft quotedblright uni2070 onesuperior twosuperior threesuperior uni2074 onequarter onehalf threequarters percent perthousand ordfeminine ordmasculine] by f.alt;
+
+} liga;
+
+
+#--------------------------------------
+feature case {
+
+	sub exclamdown by exclamdown.case;
+	sub questiondown by questiondown.case;
+	sub parenleft by parenleft.case;
+	sub parenright by parenright.case;
+	sub bracketleft by bracketleft.case;
+	sub bracketright by bracketright.case;
+	sub braceleft by braceleft.case;
+	sub braceright by braceright.case;
+	sub hyphen by hyphen.case;
+	sub uni00AD by uni00AD.case;
+	sub endash by endash.case;
+	sub emdash by emdash.case;
+	sub guilsinglleft by guilsinglleft.case;
+	sub guilsinglright by guilsinglright.case;
+	sub guillemotleft by guillemotleft.case;
+	sub guillemotright by guillemotright.case;
+
+} case;
+
+
+#--------------------------------------
+feature frac {
+
+	sub one slash four by onequarter;
+	sub one fraction four by onequarter;
+	sub one uni2215 four by onequarter;
+	sub one slash two by onehalf;
+	sub one fraction two by onehalf;
+	sub one uni2215 two by onehalf;
+	sub three slash four by threequarters;
+	sub three fraction four by threequarters;
+	sub three uni2215 four by threequarters;
+
+} frac;
+
+
+@F_LC_LEFT = [ f f.alt f_f ];
+@T_UC_LEFT = [ T Tcaron Tcommaaccent uni0162 ];
+@VW_UC_LEFT = [ V W Wgrave Wacute Wcircumflex Wdieresis ];
+@Y_UC_LEFT = [ Y Ygrave Yacute Ycircumflex Ydieresis ];
+
+@A_LC_RIGHT = [ a agrave aacute acircumflex atilde adieresis amacron abreve aring aogonek ae ];
+@ROUND_LC_RIGHT = [ c d e g o q cacute ccircumflex ccaron cdotaccent ccedilla dcaron dcroat egrave eacute ecircumflex ecaron edieresis emacron ebreve edotaccent eogonek gcircumflex gbreve gdotaccent gcommaaccent ograve oacute ocircumflex otilde odieresis omacron obreve ohungarumlaut oslash oe eth uni00AD.case ];
+@S_LC_RIGHT = [ s sacute scircumflex scaron scommaaccent scedilla ];
+@COMMA_RIGHT = [ comma period ellipsis ];
+@QUOTE_RIGHT = [ quotesingle quotedbl quoteleft quoteright quotedblleft quotedblright ];
+
+
+#--------------------------------------
+feature kern {
+
+	lookupflag IgnoreMarks;
+	pos F A  -60;
+	pos F Agrave  -60;
+	pos F Aacute  -60;
+	pos F Acircumflex  -60;
+	pos F Atilde  -60;
+	pos F Adieresis  -60;
+	pos F Amacron  -60;
+	pos F Abreve  -60;
+	pos F Aring  -60;
+	pos F Aogonek  -60;
+	pos F AE  -60;
+	pos F a  -60;
+	pos F c  -60;
+	pos F d  -60;
+	pos F e  -60;
+	pos F g  -60;
+	pos F o  -60;
+	pos F q  -60;
+	pos F s  -60;
+	pos F x  -60;
+	pos F agrave  -60;
+	pos F aacute  -60;
+	pos F acircumflex  -60;
+	pos F atilde  -60;
+	pos F adieresis  -60;
+	pos F amacron  -60;
+	pos F abreve  -60;
+	pos F aring  -60;
+	pos F aogonek  -60;
+	pos F ae  -60;
+	pos F cacute  -60;
+	pos F ccircumflex  -60;
+	pos F ccaron  -60;
+	pos F cdotaccent  -60;
+	pos F ccedilla  -60;
+	pos F dcaron  -60;
+	pos F dcroat  -60;
+	pos F egrave  -60;
+	pos F eacute  -60;
+	pos F ecircumflex  -60;
+	pos F ecaron  -60;
+	pos F edieresis  -60;
+	pos F emacron  -60;
+	pos F ebreve  -60;
+	pos F edotaccent  -60;
+	pos F eogonek  -60;
+	pos F gcircumflex  -60;
+	pos F gbreve  -60;
+	pos F gdotaccent  -60;
+	pos F gcommaaccent  -60;
+	pos F ograve  -60;
+	pos F oacute  -60;
+	pos F ocircumflex  -60;
+	pos F otilde  -60;
+	pos F odieresis  -60;
+	pos F omacron  -60;
+	pos F obreve  -60;
+	pos F ohungarumlaut  -60;
+	pos F oslash  -60;
+	pos F oe  -60;
+	pos F sacute  -60;
+	pos F scircumflex  -60;
+	pos F scaron  -60;
+	pos F scommaaccent  -60;
+	pos F scedilla  -60;
+	pos F eth  -60;
+	pos F ampersand  -60;
+	pos F comma  -120;
+	pos F period  -120;
+	pos F ellipsis  -120;
+	pos F uni00AD.case  -60;
+	pos L T  -60;
+	pos L V  -60;
+	pos L W  -60;
+	pos L Y  -60;
+	pos P A  -60;
+	pos P Agrave  -60;
+	pos P Aacute  -60;
+	pos P Acircumflex  -60;
+	pos P Atilde  -60;
+	pos P Adieresis  -60;
+	pos P Amacron  -60;
+	pos P Abreve  -60;
+	pos P Aring  -60;
+	pos P Aogonek  -60;
+	pos P AE  -60;
+	pos P comma  -60;
+	pos P period  -60;
+	pos P ellipsis  -60;
+	pos V icircumflex  60;
+	pos V itilde  60;
+	pos V idieresis  60;
+	pos V imacron  60;
+	pos V ibreve  60;
+	pos V jcircumflex  60;
+	pos V question  60;
+	pos V onesuperior  60;
+	pos V twosuperior  60;
+	pos V threesuperior  60;
+	pos W icircumflex  60;
+	pos W itilde  60;
+	pos W idieresis  60;
+	pos W imacron  60;
+	pos W ibreve  60;
+	pos W jcircumflex  60;
+	pos W question  60;
+	pos W onesuperior  60;
+	pos W twosuperior  60;
+	pos W threesuperior  60;
+	pos X c  -60;
+	pos X d  -60;
+	pos X e  -60;
+	pos X g  -60;
+	pos X o  -60;
+	pos X q  -60;
+	pos X s  -60;
+	pos X v  -60;
+	pos X w  -60;
+	pos X y  -60;
+	pos X cacute  -60;
+	pos X ccircumflex  -60;
+	pos X ccaron  -60;
+	pos X cdotaccent  -60;
+	pos X ccedilla  -60;
+	pos X dcaron  -60;
+	pos X dcroat  -60;
+	pos X egrave  -60;
+	pos X eacute  -60;
+	pos X ecircumflex  -60;
+	pos X ecaron  -60;
+	pos X edieresis  -60;
+	pos X emacron  -60;
+	pos X ebreve  -60;
+	pos X edotaccent  -60;
+	pos X eogonek  -60;
+	pos X gcircumflex  -60;
+	pos X gbreve  -60;
+	pos X gdotaccent  -60;
+	pos X gcommaaccent  -60;
+	pos X ograve  -60;
+	pos X oacute  -60;
+	pos X ocircumflex  -60;
+	pos X otilde  -60;
+	pos X odieresis  -60;
+	pos X omacron  -60;
+	pos X obreve  -60;
+	pos X ohungarumlaut  -60;
+	pos X oslash  -60;
+	pos X oe  -60;
+	pos X sacute  -60;
+	pos X scircumflex  -60;
+	pos X scaron  -60;
+	pos X scommaaccent  -60;
+	pos X scedilla  -60;
+	pos X eth  -60;
+	pos X uni00AD.case  -60;
+	pos Y igrave  60;
+	pos Y icircumflex  60;
+	pos Y itilde  60;
+	pos Y idieresis  60;
+	pos Y imacron  60;
+	pos Y ibreve  60;
+	pos Y jcircumflex  60;
+	pos Y question  60;
+	pos Y onesuperior  60;
+	pos Y twosuperior  60;
+	pos Y threesuperior  60;
+	pos Wgrave icircumflex  60;
+	pos Wgrave itilde  60;
+	pos Wgrave idieresis  60;
+	pos Wgrave imacron  60;
+	pos Wgrave ibreve  60;
+	pos Wgrave jcircumflex  60;
+	pos Wgrave question  60;
+	pos Wgrave onesuperior  60;
+	pos Wgrave twosuperior  60;
+	pos Wgrave threesuperior  60;
+	pos Wacute icircumflex  60;
+	pos Wacute itilde  60;
+	pos Wacute idieresis  60;
+	pos Wacute imacron  60;
+	pos Wacute ibreve  60;
+	pos Wacute jcircumflex  60;
+	pos Wacute question  60;
+	pos Wacute onesuperior  60;
+	pos Wacute twosuperior  60;
+	pos Wacute threesuperior  60;
+	pos Wcircumflex icircumflex  60;
+	pos Wcircumflex itilde  60;
+	pos Wcircumflex idieresis  60;
+	pos Wcircumflex imacron  60;
+	pos Wcircumflex ibreve  60;
+	pos Wcircumflex jcircumflex  60;
+	pos Wcircumflex question  60;
+	pos Wcircumflex onesuperior  60;
+	pos Wcircumflex twosuperior  60;
+	pos Wcircumflex threesuperior  60;
+	pos Wdieresis icircumflex  60;
+	pos Wdieresis itilde  60;
+	pos Wdieresis idieresis  60;
+	pos Wdieresis imacron  60;
+	pos Wdieresis ibreve  60;
+	pos Wdieresis jcircumflex  60;
+	pos Wdieresis question  60;
+	pos Wdieresis onesuperior  60;
+	pos Wdieresis twosuperior  60;
+	pos Wdieresis threesuperior  60;
+	pos Ygrave igrave  60;
+	pos Ygrave icircumflex  60;
+	pos Ygrave itilde  60;
+	pos Ygrave idieresis  60;
+	pos Ygrave imacron  60;
+	pos Ygrave ibreve  60;
+	pos Ygrave jcircumflex  60;
+	pos Ygrave question  60;
+	pos Ygrave onesuperior  60;
+	pos Ygrave twosuperior  60;
+	pos Ygrave threesuperior  60;
+	pos Yacute igrave  60;
+	pos Yacute icircumflex  60;
+	pos Yacute itilde  60;
+	pos Yacute idieresis  60;
+	pos Yacute imacron  60;
+	pos Yacute ibreve  60;
+	pos Yacute jcircumflex  60;
+	pos Yacute question  60;
+	pos Yacute onesuperior  60;
+	pos Yacute twosuperior  60;
+	pos Yacute threesuperior  60;
+	pos Ycircumflex igrave  60;
+	pos Ycircumflex icircumflex  60;
+	pos Ycircumflex itilde  60;
+	pos Ycircumflex idieresis  60;
+	pos Ycircumflex imacron  60;
+	pos Ycircumflex ibreve  60;
+	pos Ycircumflex jcircumflex  60;
+	pos Ycircumflex question  60;
+	pos Ycircumflex onesuperior  60;
+	pos Ycircumflex twosuperior  60;
+	pos Ycircumflex threesuperior  60;
+	pos Ydieresis igrave  60;
+	pos Ydieresis icircumflex  60;
+	pos Ydieresis itilde  60;
+	pos Ydieresis idieresis  60;
+	pos Ydieresis imacron  60;
+	pos Ydieresis ibreve  60;
+	pos Ydieresis jcircumflex  60;
+	pos Ydieresis question  60;
+	pos Ydieresis onesuperior  60;
+	pos Ydieresis twosuperior  60;
+	pos Ydieresis threesuperior  60;
+	pos f exclam  60;
+	pos f question  120;
+	pos f asterisk  120;
+	pos f uni2070  60;
+	pos f onesuperior  120;
+	pos f twosuperior  120;
+	pos f threesuperior  120;
+	pos f uni2074  60;
+	pos f.alt exclam  60;
+	pos f.alt question  120;
+	pos f.alt quotesingle  60;
+	pos f.alt quotedbl  60;
+	pos f.alt asterisk  60;
+	pos f.alt quoteleft  60;
+	pos f.alt quoteright  60;
+	pos f.alt quotedblleft  60;
+	pos f.alt quotedblright  60;
+	pos f.alt uni2070  60;
+	pos f.alt onesuperior  60;
+	pos f.alt twosuperior  60;
+	pos f.alt threesuperior  60;
+	pos f.alt uni2074  60;
+	pos f_f exclam  60;
+	pos f_f question  120;
+	pos f_f asterisk  120;
+	pos f_f uni2070  60;
+	pos f_f onesuperior  120;
+	pos f_f twosuperior  120;
+	pos f_f threesuperior  120;
+	pos f_f uni2074  60;
+	pos comma quotesingle  -120;
+	pos comma quotedbl  -120;
+	pos comma quoteleft  -120;
+	pos comma quoteright  -120;
+	pos comma quotedblleft  -120;
+	pos comma quotedblright  -120;
+	pos comma uni2070  -60;
+	pos comma onesuperior  -60;
+	pos comma twosuperior  -60;
+	pos comma threesuperior  -60;
+	pos comma uni2074  -120;
+	pos period quotesingle  -120;
+	pos period quotedbl  -120;
+	pos period quoteleft  -120;
+	pos period quoteright  -120;
+	pos period quotedblleft  -120;
+	pos period quotedblright  -120;
+	pos period uni2070  -60;
+	pos period onesuperior  -60;
+	pos period twosuperior  -60;
+	pos period threesuperior  -60;
+	pos period uni2074  -120;
+	pos questiondown.case A  60;
+	pos questiondown.case Agrave  60;
+	pos questiondown.case Aacute  60;
+	pos questiondown.case Acircumflex  60;
+	pos questiondown.case Atilde  60;
+	pos questiondown.case Adieresis  60;
+	pos questiondown.case Amacron  60;
+	pos questiondown.case Abreve  60;
+	pos questiondown.case Aring  60;
+	pos questiondown.case Aogonek  60;
+	pos questiondown.case AE  60;
+
+	pos @F_LC_LEFT @QUOTE_RIGHT   120;
+	pos @T_UC_LEFT @ROUND_LC_RIGHT   -60;
+	pos @T_UC_LEFT @COMMA_RIGHT   -60;
+	pos @VW_UC_LEFT @COMMA_RIGHT   -60;
+	pos @Y_UC_LEFT @A_LC_RIGHT   -60;
+	pos @Y_UC_LEFT @ROUND_LC_RIGHT   -60;
+	pos @Y_UC_LEFT @S_LC_RIGHT   -60;
+	pos @Y_UC_LEFT @COMMA_RIGHT   -60;
+
+} kern;
+
